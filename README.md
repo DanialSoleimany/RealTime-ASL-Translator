@@ -1,9 +1,9 @@
 # Real-Time American Sign Language Translator
 
 ## Overview
-This project aims to assist the deaf and hard-of-hearing community in bridging communication gaps by leveraging computer vision and AI. The system enables real-time recognition of American Sign Language (ASL) gestures, providing an accessible way to interpret hand gestures into text. This tool could greatly enhance communication in various social, educational, and professional environments for people who rely on ASL to communicate.
+In this project, I used using computer vision and AI to recognize the ASL alphabet and translate it into text, helping the deaf and hard-of-hearing community communicate more easily. This system now recognizes ASL gestures in real time, making communication smoother across various settings for ASL users.
 
-The project collects data for ASL hand gestures through a webcam, extracts hand landmarks, and classifies gestures using machine learning. The model recognizes letters from "a" to "z," with adaptations for letters like "J" and "Z," which require hand movement. Additional gestures allow users to delete text, clear all text, and add spaces, offering a more comprehensive and user-friendly experience.
+I collected data for ASL hand gestures through a webcam, extracting hand landmarks and classifying gestures using machine learning. The model recognizes letters from "a" to "z," with specific adaptations for letters like "J" and "Z"—for "Z," I applied modifications to handle the required hand movement accurately. Additional gestures enable users to delete last character, clear all text in the textbox, and add spaces, creating a more comprehensive and user-friendly experience.
 
 <p align="center">
   <b>Sign Language Alphabet (a-z)</b>
@@ -85,9 +85,9 @@ The model used in this project is a **Random Forest Classifier**, a robust and v
 The `realtime_detection.py` module manages the live detection and display of ASL gestures. It captures video frames from the webcam, processes each frame to extract hand landmarks, and uses the trained model to predict the corresponding ASL character.
 
 - **Delay Adjustment with Counter**:
-  - To improve accuracy and user experience, a delay is introduced to control the rate at which detected ASL gestures are converted to text. This delay is managed through a counter.
-  - You can adjust the counter value to modify the speed of ASL-to-text conversion. Setting a lower counter value will make the conversion faster, displaying letters more quickly. A higher counter value, on the other hand, slows the process down, allowing more time for each gesture to be accurately recognized.
-  - The current setting balances speed and accuracy, allowing users to display ASL characters (a-z) at a comfortable pace, making it possible to spell out names and sentences without rushing the gestures.
+  - A delay is introduced to control the rate at which detected ASL gestures are converted to text. This delay is managed through a counter.
+  - You can adjust the counter value to modify the speed of ASL-to-text conversion. Setting a lower counter value will make the conversion faster, displaying letters more quickly. A higher counter value, on the other hand, slows the process down.
+  - The current speed setting allows users to display ASL characters (a-z) at a comfortable pace, enabling them to spell out names and sentences smoothly without rushing their gestures.
 
 The module provides a smooth real-time experience by handling gestures with additional controls for special actions (backspace, clear, and space) and gracefully managing gestures that don’t match any ASL letter.
 
