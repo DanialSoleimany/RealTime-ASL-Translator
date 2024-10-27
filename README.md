@@ -48,6 +48,12 @@ Install them using pip:
 pip install mediapipe==0.10.14 opencv-python==4.10.0.84 scikit-learn==1.5.2 customtkinter==5.2.1
 ```
 
+## Mediapipe
+I utilized Mediapipe to detect hand landmarks for each ASL gesture. The x and y coordinates of these landmarks were extracted and then fed into the machine learning model, allowing for precise feature extraction and reliable, real-time predictions. This step ensures that each gesture is accurately represented, even with slight variations in hand positioning.
+
+## CustomTkinter
+The desktop interface for this application was built using customtkinter, which provides a modern, user-friendly design. This package was used to create a dark-themed interface where users can view the webcam feed, see recognized letters in real time, and use special gestures for actions like deleting and clearing text. The interface also allows users to customize the speed of ASL-to-text conversion with a delay setting.
+
 ## Dataset
 The dataset was self-collected with approximately 1000 images per ASL letter. Using the `collect_images.py` module, hand gestures were captured and labeled according to each letter. Since certain letters (e.g., "J" and "Z") require motion, static representations were chosen for these gestures to accommodate the model’s one-frame-at-a-time recognition limitation.
 
