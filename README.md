@@ -40,11 +40,12 @@ To get started, ensure the following dependencies are installed:
 - **Mediapipe**: `0.10.14`
 - **OpenCV (cv2)**: `4.10.0`
 - **Scikit-learn**: `1.5.2`
+- **customtkinter**: 5.2.1
 
 Install them using pip:
 
 ```bash
-pip install mediapipe==0.10.14 opencv-python==4.10.0 scikit-learn==1.5.2
+pip install mediapipe==0.10.14 opencv-python==4.10.0.84 scikit-learn==1.5.2 customtkinter==5.2.1
 ```
 
 ## Dataset
